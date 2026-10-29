@@ -1,0 +1,28 @@
+# Folders
+/.quarto/
+/_site/
+docs/
+/notebooks/food_not_food_text_model/
+/notebooks/learn_hf_food_not_food_text_classifier_model/
+
+/notebooks/demos/
+/notebooks/*.safetensors
+
+
+# Models
+*models*
+*.pt*
+
+# Tracking
+*/wandb/*
+
+# Misc
+*.DS_Store
+*.ipynb_checkpoints
+scratch_pad.md
+**/*.quarto_ipynb*.safetensors
+*.log.gz
+nvidia-bug-report.log.gz
+notebooks/smolvlm2-500m-*/
+
+**/*.quarto_ipynb
