@@ -1,0 +1,79 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "**"
+    - "!notebooks_md/"
+
+website:
+  title: "Learn Hugging Face 🤗"
+  favicon: images/learn-hf-favicon.png
+  image: https://huggingface.co/datasets/mrdbourke/learn-hf-images/resolve/main/misc/learn_hf_cover_image.png
+  description: "Practical hands-on machine learning tutorials using the Hugging Face ecosystem."
+  site-url: https://www.learnhuggingface.com
+  repo-url: https://github.com/mrdbourke/learn-huggingface 
+  issue-url: https://github.com/mrdbourke/learn-huggingface/issues 
+  reader-mode: true
+  back-to-top-navigation: true 
+  twitter-card: true
+  open-graph: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: extras/setup.md
+        text: Setup
+      - href: extras/glossary.md
+        text: Glossary
+    tools:
+      - icon: github
+        href: https://github.com/mrdbourke/learn-huggingface
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "LLMs/Natural Language Processing (NLP)"
+        contents:
+          - href: notebooks/hugging_face_llm_full_fine_tune_tutorial.ipynb
+            text: Fully fine-tune a (small) LLM to do structrued data extraction
+          - href: notebooks/hugging_face_llm_batched_inference_with_transformers.ipynb
+            text: Perform faster inference with LLMs using batched inference with transformers
+          - href: notebooks/hugging_face_text_classification_tutorial.ipynb
+            text: Build a custom text classification model and demo
+      - section: "Computer Vision"
+        contents:
+          - href: notebooks/hugging_face_object_detection_tutorial.ipynb
+            text: Build a custom object detection model and demo
+          - href: notebooks/hugging_face_vlm_fine_tune_tutorial.ipynb
+            text: Fine-tune a Small VLM to do structured data extraction
+      - section: "RAG - Retrieval-Augmented Generation"
+        contents:
+          - href: notebooks/hugging_face_multimodal_rag_tutorial.ipynb
+            text: Build a multimodal RAG pipeline with NVIDIA Nemotron models
+  page-footer: 
+    right:
+      - icon: globe
+        href: https://www.mrdbourke.com
+      - icon: github
+        href: https://github.com/mrdbourke/learn-huggingface
+      - icon: youtube 
+        href: https://www.youtube.com/channel/UCr8O8l5cCX85Oem1d18EezQ 
+      - icon: twitter-x
+        href: https://twitter.com/mrdbourke
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mrdbourke/
+
+filters:
+  - filters/cell-numbers.lua
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles/custom.css
+    toc: true
+    page-layout: full
+    highlight-style: pygments
